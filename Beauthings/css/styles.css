@@ -1,0 +1,499 @@
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: rgb(214, 199, 172);
+    color: rgb(226, 220, 209);
+}
+
+header#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(196, 148, 59);
+    position: sticky;
+    top: 0px;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+}
+
+header#header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 2.8em;
+}
+
+header#header .login-box {
+    display: flex;
+    align-items: center;
+}
+
+header#header .login-box input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+header#header .login-box button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(196, 148, 59);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+header#header .login-box button:hover {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+}
+
+.banner {
+    background-image: url("./img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 15px 0;
+    text-align: center;
+    color: rgb(196, 148, 59);
+}
+
+
+nav.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 51, 51);
+    padding: 10px 0;
+}
+
+nav.navigation button {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+nav.navigation button:hover {
+    background-color: rgb(196, 148, 59);
+}
+
+nav.navigation .search-box {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav.navigation .search-box input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+nav.navigation .search-box .search-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav.navigation .search-box .search-button:hover {
+    background-color: rgb(196, 148, 59);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.card {
+    flex-basis: 300px;
+    margin: 20px;
+    border: 1px solid rgb(196, 148, 59);
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 1px 10px rgb(196, 148, 59);
+    cursor: default;
+    transition: all 400ms ease;
+    max-width: 300px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgb(51, 51, 51);
+    transform: translate(-1%); 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;   
+}
+
+
+.card .contenido p {
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+
+.card .contenido h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.card .contenido h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.card .contenido button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    background: rgb(196, 148, 59);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card .contenido button:hover {
+    background: rgb(106, 106, 106);
+    color: rgb(255, 255, 255);
+}
+
+
+#btnComprar {
+    background-color:  rgb(196, 148, 59);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+#btnComprar:hover {
+    background-color: rgb(106, 106, 106) }
+
+.card2{
+    margin: 20px;
+    border: 1px solid rgb(196, 148, 59);
+    border-radius:  6px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 1px 10px rgb(196, 148, 59);
+    cursor: default;
+}
+    
+.card2 .contenido{
+    padding: 15px;
+    text-align: center;   
+}
+    
+.card2 .contenido #detalle {
+    text-align:start;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+    
+.card2 .contenido p{
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+    
+.card2 .contenido h3{
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+    
+.card2 .contenido h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+    
+.card2 .contenido .frame{  
+    padding: 5px;
+    margin-top: 10px;
+    color:rgb(196, 148, 59);
+    border: 2px solid rgb(196, 148, 59);
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+    
+.card2 .contenido a button{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    background-color:rgb(196, 148, 59);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+    
+.card2 .contenido a button:hover {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(106, 106, 106);
+    color: rgb(255, 255, 255);
+}
+    
+    
+.card2 .form form div label {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(196, 148, 59);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+    
+.card2 .form form div button { 
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+    
+.card2 .form form div button input {
+    cursor: pointer;
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 3px;
+    background-color: rgb(196, 148, 59);
+    color:  rgb(255, 255, 255);
+}
+    
+.card2 .form form div button input:hover { 
+    cursor: pointer;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 106, 106);
+}
+
+.card2 .form form #botonEnviar { 
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+.card2 .form form #botonEnviar {
+    cursor: pointer;
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 3px;
+    background-color: rgb(196, 148, 59);
+    color:  rgb(255, 255, 255);
+}
+    
+.card2 .form form #botonEnviar:hover { 
+    cursor: pointer;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 106, 106);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+    
+.form div {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+    
+.form label {
+    margin-bottom: 5px; 
+}
+    
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="email"] {
+    padding: 8px;
+    font-size: 16px;
+}
+    
+.form input[type="submit"],
+.form input[type="reset"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;    
+}    
+
+
+footer {
+    background-color: rgb(196, 148, 59);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+footer button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(196, 148, 59);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer button:hover {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+}
+
+.bi{
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+}
+
+.bi-facebook{
+    color:blue;
+}
+
+.bi-facebook:hover{
+    color:white;
+    ;
+}
+
+.bi-twitter-x{
+    color:black;
+}
+
+.bi-twitter-x:hover{
+    color:white;
+}
+
+.bi-instagram{
+    color:purple;
+}
+
+.bi-instagram:hover{
+    color:white;
+}
+
+
+@media (max-width: 1200px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 992px) {
+        
+    .card {
+        max-width: 100%;
+    }
+
+    .banner {
+        padding: 10px 0;
+    }
+    header#header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .banner h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navigation .search-box {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .title {
+        font-size: 1.3em;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.1em;
+    }
+
+    .banner h1 {
+        font-size: 1.5em;
+    }
+
+    .login-box input[type="text"],
+    .login-box button,
+    .navigation button,
+    .search-box input[type="text"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+

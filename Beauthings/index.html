@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon"href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
     <title>Beauthing objetos vintage</title>
 </head>
 
 <body>
     <header id="header">
-        <div><img src="./img/logo.jpg"></div>
+        <div><img src="./img/logo.png" alt="logo"></div>
         <h1 class="title">Beauthings objetos vintage</h1>
         <div class="login-box">
             <input type="text" placeholder="Ingrese su usuario">
@@ -35,10 +38,8 @@
         <a href="Catalogo.html"><button>Catálogo</button></a>
         <a href="restauraciones.html"><button>Restauraciones</button></a>
         <a href="contacto.html"><button>Contacto</button></a>
-        <div class="search-box">
-            <input type="text" placeholder="Buscar...">
-            <button class="search-button">Buscar</button>
-        </div>
+        <button id="btnPagar" onclick="pagar()">Su carrito</button>
+        <button id="btnLimpiar" onclick="limpiarCarrito()">Vaciar Carrito</button>
     </nav>
 
     <main>
@@ -48,10 +49,11 @@
                     <img src="./img/camara.jpg" alt="Antigua cámara reflex lituana">
                 </figure>
                 <div class="contenido">
-                    <h3>camara reflex</h3>
+                    <h3>Cámara reflex</h3>
                     <p>Antigua cámara reflex. Origen: Rusia. Año estimado: 1943.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 135000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Cámara reflex', 135000)">Agregar al carrito</button>
                 </div>
             </div>
             <div class="card">
@@ -59,10 +61,11 @@
                     <img src="./img/telefono.jpg" alt="Telefono de dial, 1977">
                 </figure>
                 <div class="contenido">
-                    <h3>Telefono de dial</h3>
-                    <p>Telefono de dial verde. Origen: Japón. Año estimado:1977.
+                    <h3>Teléfono de dial</h3>
+                    <p>Teléfono de dial verde. Origen: Japón. Año estimado:1977.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 55000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Teléfono de dial', 55000)">Agregar al carrito</button>
                 </div>
             </div>
             <div class="card">
@@ -73,7 +76,8 @@
                     <h3>Monóculo</h3>
                     <p>Monóculo oro 14 kilates. origen: Alemania. Año estimado: 1899.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 45000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Monóculo', 45000)">Agregar al carrito</button>
                 </div>
             </div>
             <div class="card">
@@ -84,7 +88,8 @@
                     <h3>Pistolón</h3>
                     <p>Pistola avancarga. Origen: Turquía. Año estimado: 1911.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 87000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Pistolón', 87000)">Agregar al carrito</button>
                 </div>
             </div>
             <div class="card">
@@ -95,7 +100,8 @@
                     <h3>Reloj de cadena</h3>
                     <p>Reloj de cadena labrado. Origen Suecia. Año estimado: 1932.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 137000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Reloj de cadena', 137000)">Agregar al carrito</button>
                 </div>
             </div>
             <div class="card">
@@ -106,22 +112,23 @@
                     <h3>Reloj de mesa</h3>
                     <p>Antiguo reloj de escritorio, en madera. Año estimado 1939.
                     </p>
-                    <a href="#">Agregar al carrito</a>
+                    <h2>$ 52000.-</h2>
+                    <button id="btnComprar" onclick="agregarProducto('Reloj de mesa', 52000)">Agregar al carrito</button>
                 </div>
             </div>
         </div>
     </main>
-
+    <div id="carrito"></div>
     <footer>
         <a href="index.html"><button>Arriba</button></a>
         <br>
-        <div class="iconos-redes">
+        <div class="iconosredes">
             <a href="https://www.facebook.com/oregoom" target="_blank"><i class="bi bi-facebook"></i></a>
             <a href="https://x.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
             <a href="https://www.instagram.com/?hl=es" target="_blank"><i class="bi bi-instagram"></i></a>
         </div>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-    </footer>
-<script src="script.js"></script>
+        <p>&copy; 2024 Mi Página Web. algunas imágenes son tomadas de la web, Todos los derechos reservados?.</p>
+    </footer>    
+    <script src="./js/tienda.js"></script>
 </body>
 </html>
